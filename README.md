@@ -76,6 +76,18 @@ file sizes with; `secondary`/`primary-dimmed` carry reasoning-block items and
 file names. Teal here means the tool activity reads as the same family as the
 assistant's prose instead of as grey chrome.
 
+The user-message bubble is also retinted. DSH paints it with
+`--dsw-specific-bubble` and hard-codes its text to `--dsw-alias-label-primary`,
+so upstream the user's bubble (`#1a1a1a`) and the assistant's reply (plain
+`#131313`) differed by 7% luminance — the two speakers were nearly
+indistinguishable. A teal-tinted panel makes the speaker obvious while keeping
+the teal text above AAA:
+
+| Token | Upstream | Applied | Bubble vs page base | Teal text on it |
+|---|---|---|---|---|
+| `--dsw-specific-bubble` | `#1a1a1a` | `#17302b` | ΔE 3.4 → 16.4 | 9.24:1 → 7.46:1 |
+| `--dsw-specific-bubble-highlight` | `#212121` | `#1d3a33` | — (unreferenced by components) | 6.54:1 |
+
 Everything else is the upstream Miku palette unchanged — in particular the teal
 foreground `#56d0bd` (9.87:1 on `#131313`, above the WCAG AAA 7:1 floor) that
 defines the skin's look, plus the teal-tinted borders, scrollbars and hover
