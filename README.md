@@ -62,6 +62,20 @@ floor, which made dim text genuinely hard to read:
 | `--dsw-alias-label-caption` / `--dsw-alias-label-dimmed` | `#546E7A` | `#529A90` | 3.44:1 → 5.65:1 (5.89:1 on `#212121`) |
 | `--shiki-token-punctuation` | `#905BDE` | `#B18CEA` | 4.32:1 → 7.13:1 |
 
+The secondary/tertiary greys are also teal-tinted, keeping each level's
+luminance ladder (contrast is preserved within ±0.4, so only the hue changes):
+
+| Token | Upstream | Applied | Before → after |
+|---|---|---|---|
+| `--dsw-alias-label-secondary` | `#b2ccd6` | `#6dd6c6` | 11.06:1 → 10.69:1 |
+| `--dsw-alias-label-primary-dimmed` | `#b2ccd6` | `#6dd6c6` | 11.06:1 → 10.69:1 |
+| `--dsw-alias-label-tertiary` | `#7d9aa6` | `#44a99a` | 6.23:1 → 6.54:1 |
+
+`tertiary` is the level DSH paints tool-row descriptions, chevrons, statuses and
+file sizes with; `secondary`/`primary-dimmed` carry reasoning-block items and
+file names. Teal here means the tool activity reads as the same family as the
+assistant's prose instead of as grey chrome.
+
 Everything else is the upstream Miku palette unchanged — in particular the teal
 foreground `#56d0bd` (9.87:1 on `#131313`, above the WCAG AAA 7:1 floor) that
 defines the skin's look, plus the teal-tinted borders, scrollbars and hover
